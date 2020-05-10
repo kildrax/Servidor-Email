@@ -1,7 +1,7 @@
 const sgMail = require('@sendgrid/mail');
 
 const sendEmail = (formulario) => {
-
+    console.log(formulario + 'respuesta form');
     sgMail.setApiKey('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');
     const msg = {
         to: 'wooody0313@gmail.com',
@@ -24,7 +24,6 @@ const sendEmail = (formulario) => {
             }
         });
 }
-
 
 module.exports = {
     sendEmail
