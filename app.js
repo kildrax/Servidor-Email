@@ -8,12 +8,16 @@ const index = require('./index');
 
 const app = express();
 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    next();
+});
 app.use(bodyParser.json());
 app.use(cors())
 app.post('/formulario', (req, res) => {
     index.sendEmail(req.body);
     res.status(200).send(true);
 })
-app.listen(3000, () => {
-    console.log('Servidor corriendo')
-}); 
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`listening on ${PORT}`));
