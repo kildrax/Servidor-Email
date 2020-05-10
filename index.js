@@ -15,7 +15,7 @@ const sendEmail = (formulario) => {
     //ES6
     sgMail
         .send(msg)
-        .then(() => true,
+        .then((data) => console.log(data + ' data'),
          error => {
             console.error(error);
 
