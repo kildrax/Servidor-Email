@@ -19,7 +19,7 @@ app.post('/formulario', (req, res) => {
     res.status(200).send(true);
 })
 
-if (process.env.NODE.ENV === 'production') {
+if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, 'front_end', 'build')));
 
     app.get('*', (req, res) => {
