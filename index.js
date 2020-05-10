@@ -4,7 +4,7 @@ const sendEmail = (formulario) => {
 
     sgMail.setApiKey('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');
     const msg = {
-        to: 'kcgkily@gmail.com',
+        to: 'wooody0313@gmail.com',
         from: 'kcgkily@gmail.com',
         subject: 'Sending with Twilio SendGrid is Fun',
         text: 'Prueba con Nodemon',
